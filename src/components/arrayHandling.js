@@ -1,4 +1,4 @@
-//returns a clone of an array
+//returns a clone of an array ->test if it is cloned?
 export const cloneArray = (array) => {
     var newArray = array
     return newArray
