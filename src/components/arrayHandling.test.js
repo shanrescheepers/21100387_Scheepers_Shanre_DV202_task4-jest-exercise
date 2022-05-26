@@ -73,5 +73,72 @@ describe("Test Suite for Handling an Array..", () => {
     }) //END OF TEST 4
 
     //TEST 5
+    //removes the last item of an array
+    //export const popLastItemFromArray = (array) => {
+    //  var newArray = array
+    //  newArray.pop()
+    //  return newArray
 
-})
+    test("To remove the last item(number) of an array..", () => {
+        //const colors = ["Blue", "Green", "Red", "Yellow"];
+        //colors.pop();
+        // console.log(colors);=blue, green,red. MEthod =pop()
+
+        const anArray = [2, 1, 2, 3, 4, 5, 1, 2];
+        anArray.pop();
+
+        let newArrayPopped = popLastItemFromArray(anArray);
+        expect(anArray).toBe(newArrayPopped);
+    }) //END OF TEST 5
+
+    //TEST 6
+    //removes the first item of an array
+    //export const popFirstItemFromArray = (array) => {
+    // var newArray = array
+    //newArray.shift()
+    //return newArray}
+
+    //var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    //fruits.shift();
+    // var fruits = ["Orange", "Apple", "Mango"];
+    test("To remove the last first(number) of an array..", () => {
+        const anArray = [2, 1, 2, 3, 4, 5, 1];
+        // newArrayShifted = anArray.shift();
+        anArray.shift();
+
+        let newArrayShifted = popFirstItemFromArray(anArray);
+        expect(anArray).toBe(newArrayShifted);
+        //This Passed
+    }) //END OF TEST 6
+
+    //TEST 7
+    //removes a single item of an array based using its index
+    //export const removeItemFromArray = (array, index) => {
+    //  var newArray = array
+    // newArray.splice(index, 1)
+    // return newArray}
+    test("To remove an item from an array based on its index..", () => {
+        const anArray = [1, 2, 3, 4, 5, 1];
+        anArray.splice(3, 1);
+        // index 3 =nr4
+        let newArraySpliced = removeItemFromArray(anArray, 3);
+        expect(anArray).toEqual[1, 2, 3, 5, 1];//1,2,3,5,1
+        // this Passed
+        expect(anArray).toEqual(newArraySpliced);
+        //this also passes
+    }) //END OF TEST 7
+
+    // TEST 8
+    //reorders the array
+    //export const returnOrderArray = (array) => {
+    //  return array.sort()}
+    test("Test to re-order/sort teh array and return the new returnOrderArray", () => {
+        const anArray = [1, 2, 3, 5, 1];
+        anArray.sort();
+
+        let newlySortedArray = returnOrderArray(anArray);
+        expect(anArray).toEqual(newlySortedArray);
+    }); //This passed
+    //END OF TEST 8
+});
+//END OF TASK 4
